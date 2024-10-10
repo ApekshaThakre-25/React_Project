@@ -44,20 +44,20 @@ const Stopwatch = () => {
         <button
           onClick={startStopwatch}
           disabled={isRunning}
-          className="bg-green-400 font-extrabold rounded-md p-1"
+          className="bg-green-400 font-extrabold rounded-md p-1 font-serif"
         >
           Start
         </button>
         <button
           onClick={stopStopwatch}
           disabled={!isRunning}
-          className="bg-red-400 font-extrabold rounded-md p-1"
+          className="bg-red-400 font-extrabold rounded-md p-1 font-serif "
         >
           Stop
         </button>
         <button
           onClick={resetStopwatch}
-          className="bg-yellow-400 font-extrabold rounded-md p-1"
+          className="bg-yellow-400 font-extrabold rounded-md p-1 font-serif"
         >
           Reset
         </button>

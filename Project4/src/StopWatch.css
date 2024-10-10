@@ -6,9 +6,10 @@
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f0f4c3, #c8e6c9);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #e0e0e0, #ffffff);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   margin: 10% auto;
+  border: 5px solid #424242; 
   transition: transform 0.2s;
 }
 
@@ -18,7 +19,7 @@
 
 h1 {
   font-size: 2.5rem;
-  color: #2e7d32;
+  color: #424242; 
   font-family: 'Arial', sans-serif;
   margin: 0;
 }
@@ -43,7 +44,7 @@ button {
 }
 
 button:disabled {
-  background-color: #bdbdbd;
+  background-color: #bdbdbd; 
   cursor: not-allowed;
 }
 
@@ -52,13 +53,13 @@ button:not(:disabled):hover {
 }
 
 .bg-green-400 {
-  background-color: #66bb6a; /* Green */
+  background-color: #388e3c; 
 }
 
 .bg-red-400 {
-  background-color: #ef5350; /* Red */
+  background-color: #d32f2f;
 }
 
 .bg-yellow-400 {
-  background-color: #ffa726; /* Yellow */
+  background-color: #f57c00; 
 }
