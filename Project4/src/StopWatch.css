@@ -1,0 +1,43 @@
+.container {
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.bg-green-400 {
+  background-color: #38a169;
+}
+
+.bg-red-400 {
+  background-color: #e53e3e;
+}
+
+.bg-yellow-400 {
+  background-color: #d69e2e;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
