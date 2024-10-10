@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./StopWatch.css"
+import "./StopWatch.css";
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
@@ -28,41 +28,41 @@ const Stopwatch = () => {
   };
 
   const formatTime = (time) => {
-    const minutes = String(Math.floor((time / 60000) % 60)).padStart(2, "0");
-    const seconds = String(Math.floor((time / 1000) % 60)).padStart(2, "0");
-    const milliseconds = String(Math.floor((time % 1000) / 10)).padStart(
-      2,
-      "0"
-    );
-    return `${minutes}:${seconds}:${milliseconds}`;
+    const hours = String(Math.floor((time / 3600000) % 24)).padStart(2, 0);
+    const minutes = String(Math.floor((time / 60000) % 60)).padStart(2, 0);
+    const seconds = String(Math.floor((time / 1000) % 60)).padStart(2, 0);
+    const milliseconds = String(Math.floor((time % 1000) / 10)).padStart(2, 0);
+    return `${hours}:${minutes}:${seconds}:${milliseconds}`;
   };
 
   return (
-    <div className="container shadow-md mt-20 text-center h-36 w-1/2 ml-48">
-      <h1 className="font-bold font-mono font-1">{formatTime(time)}</h1>
-      <div className="flex justify-center gap-x-28 mt-5">
+    <>
+      <div className="main_div">
+        <h1 className="font-extrabold font-mono ">{formatTime(time)}</h1>
+      </div>
+      <div className="flex justify-center gap-x-4 mt-5">
         <button
           onClick={startStopwatch}
           disabled={isRunning}
-          className="bg-green-400 font-extrabold rounded-md p-1 w-16"
+          className="bg-green-400 font-extrabold rounded-md p-1"
         >
           Start
         </button>
         <button
-          className="bg-red-400 font-extrabold rounded-md p-1 w-16"
           onClick={stopStopwatch}
           disabled={!isRunning}
+          className="bg-red-400 font-extrabold rounded-md p-1"
         >
           Stop
         </button>
         <button
-          className="bg-yellow-400 font-extrabold rounded-md p-1 w-16"
           onClick={resetStopwatch}
+          className="bg-yellow-400 font-extrabold rounded-md p-1"
         >
           Reset
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
